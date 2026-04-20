@@ -1,0 +1,154 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+:root {
+    --prime-blue: #1a242f; /* Il blu scuro di sfondo */
+    --prime-nav: #0f171e;  /* Il nero del menu */
+    --prime-action: #00a8e1; /* Il classico azzurro Prime */
+    --prime-text: #f2f4f6;
+}
+
+body {
+    background-color: var(--prime-blue);
+    color: var(--prime-text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header stile Prime */
+.navbar {
+    background-color: var(--prime-nav) !important;
+    padding: 0.8rem 2rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: white !important;
+    letter-spacing: -1px;
+}
+
+/* Card stile Prime */
+.movie-card {
+    background-color: #252e39 !important;
+    border: none !important;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    
+    &:hover {
+        transform: scale(1.15); /* Zoom tipico di Prime */
+        z-index: 10;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        background-color: #303b47 !important;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+    }
+
+    .info-overlay {
+        font-size: 0.75rem;
+        color: #8197a4;
+    }
+}
+
+/* Stelline e Voto */
+.stars-container {
+    display: flex;
+    gap: 2px;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.star-filled {
+    color: #ffc107; /* Giallo Prime/Amazon */
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+}
+
+.star-empty {
+    color: #3e4e5e; /* Grigio bluastro scuro */
+}
+
+/* Effetto al passaggio del mouse sulla card */
+.movie-card:hover .star-filled {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.prime-footer {
+    background-color: #0f171e; /* Il nero profondo di Prime */
+    padding: 3rem 0 2rem 0;
+    color: #8197a4; /* Grigio tipico dei testi secondari */
+    font-size: 0.9rem;
+
+    .footer-logo {
+        height: 30px;
+        filter: brightness(0) invert(1); /* Rende il logo bianco se è nero */
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 1.5rem;
+
+        a {
+            color: #00a8e1; /* Azzurro Prime per i link */
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-copy {
+        font-size: 0.75rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 1.5rem;
+        
+        img {
+            width: 24px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
