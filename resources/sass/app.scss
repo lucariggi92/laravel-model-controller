@@ -82,12 +82,12 @@ body {
 }
 
 .star-filled {
-    color: #ffc107; /* Giallo Prime/Amazon */
+    color: #ffc107; 
     text-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
 }
 
 .star-empty {
-    color: #3e4e5e; /* Grigio bluastro scuro */
+    color: #3e4e5e; 
 }
 
 /* Effetto al passaggio del mouse sulla card */
@@ -97,14 +97,14 @@ body {
 
 /* Footer */
 .prime-footer {
-    background-color: #0f171e; /* Il nero profondo di Prime */
+    background-color: #0f171e; 
     padding: 3rem 0 2rem 0;
-    color: #8197a4; /* Grigio tipico dei testi secondari */
+    color: #8197a4; 
     font-size: 0.9rem;
 
     .footer-logo {
         height: 30px;
-        filter: brightness(0) invert(1); /* Rende il logo bianco se è nero */
+        filter: brightness(0) invert(1); 
         margin-bottom: 1.5rem;
     }
 
@@ -118,7 +118,7 @@ body {
         margin-bottom: 1.5rem;
 
         a {
-            color: #00a8e1; /* Azzurro Prime per i link */
+            color: #00a8e1; 
             text-decoration: none;
             transition: color 0.3s ease;
 
